@@ -64,28 +64,30 @@
         object-fit: cover;
 
         @include mobile {
-          width: 200px;
-          height: 50px;
+          // width: 200px;
+          // height: 50px;
+          display: none;
         }
       }
 
       h1 {
-        font-size: 96px;
+        font-size: 80px;
         font-weight: 100;
 
         @include mobile {
-          font-size: 36px;
+          font-size: 30px;
         }
       }
 
       button {
         width: 300px;
-        height: 100px;
+        height: 90px;
         border-radius: 50px;
-        background-color: orange;
+        background-color: #fa6400;
         border: none;
         font-size: 24px;
         cursor: pointer;
+        font-weight: 500;
 
         @include mobile {
           font-size: 16px;
@@ -100,47 +102,89 @@
     display: flex;
     max-width: 1366px;
     margin: auto;
-
+    gap: 20px; // Adds spacing between the boxes
+    flex-wrap: wrap; // Allows wrapping for responsive designs
+  
     @include mobile {
       flex-direction: column;
-      width: 100%;
+      width: 90%;
+      gap: 10px;
     }
-
+  
     .box {
-      padding: 50px;
-      border: 0.5px solid gray;
+      flex: 1 1 calc(25% - 20px); // Each box takes up 25% width with spacing
+      background: linear-gradient(145deg, #1e1e30, #141427); // Gradient background
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 0.5px solid gray;
+  
       @include mobile {
-        border: none;
-        align-items: center;
-        gap: 20px;
-        padding: 10px;
+        flex: none;
+        width: 100%;
+        padding: 20px;
       }
-
+  
+      h2 {
+        font-size: 1.8rem;
+        // color: #a349fd;
+        color: #fa6400;
+        margin-bottom: 10px;
+      }
+  
       p {
+        font-size: 1.3rem;
+        margin: 20px 0;
+        text-align: justify;
+        line-height: 1.4;
+  
         @include mobile {
-          display: none;
+          font-size: 0.9rem;
+          margin: 10px 0;
         }
       }
-
+      .tech{
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+  
       button {
-        padding: 10px;
-        background-color: orange;
+        padding: 12px 20px;
+        background: linear-gradient(135deg, #ff944d, #fa6400);
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 600;
         border: none;
+        border-radius: 30px;
         cursor: pointer;
-
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+  
+        &:hover {
+          background: linear-gradient(135deg, #fa6400, #ff944d);
+          transform: translateY(-3px);
+        }
+      
+  
         @include mobile {
-          background-color: transparent;
-          border: 1px solid orange;
-          border-radius: 5px;
-          color: orange;
-          width: 50%;
-          padding: 5px;
+          padding: 10px;
+          font-size: 0.9rem;
         }
       }
     }
+  
+      &:hover {
+        transform: translateY(-10px); // Adds lift effect
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+      }
+    }
   }
+  
 }
