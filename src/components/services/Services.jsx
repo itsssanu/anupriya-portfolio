@@ -35,7 +35,9 @@ const Services = () => {
       animate={"animate"}
     >
       <motion.div className="textContainer" variants={variants}>
-        <p>
+
+      <div className="section-title mx-auto mbltitle">SERVICES I DO</div>       
+       <p>
           An enthusiastic Frontend Developer
           <br /> and UI/UX Designer
         </p>
@@ -43,7 +45,7 @@ const Services = () => {
       </motion.div>
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
-          <img src="/people.webp" alt="" />
+          <button className="frt-btn">SERVICES</button>
           <h1>
             <motion.b whileHover={{ color: "#fa6400" }}>Unique</motion.b> mix of technical
           </h1>
@@ -52,7 +54,7 @@ const Services = () => {
           <h1>
             <motion.b whileHover={{ color: "#ff944d" }}>expertise </motion.b> and creativity.
           </h1>
-          <button>SERVICES DO?</button>
+          <button>I DO?</button>
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
@@ -60,22 +62,22 @@ const Services = () => {
           className="box"
           whileHover={{ boxShadow: "0 0 1rem #fa6400" }}
         >
-          <h2>Web Development</h2>
+          <h2 className="section-title max-auto">Web Development</h2>
           <p>
           I build scalable applications using modular design and component-based architecture, ensuring flexibility, efficiency, and easy maintenance as your business grows.
           </p>
           {/* <button>Go</button> */}
           <div className="tech">
-            <button><span class="tech-item">React.js</span></button>
-            <button><span class="tech-item">HTML5</span></button>
-            <button><span class="tech-item">CSS3</span></button>
+            <button>React.js</button>
+            <button>HTML5</button>
+            <button>CSS3</button>
           </div>
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ boxShadow: "0 0 1rem #ff944d" }}
         >
-          <h2>UX/UI Desgining</h2>
+          <h2 className="section-title max-auto">UX/UI Desgining</h2>
           <p>
           I specialize in designing wireframes and prototypes to create intuitive, user-centered interfaces
           that are optimized for both engagement and accessibility.
@@ -90,7 +92,7 @@ const Services = () => {
           className="box"
           whileHover={{ boxShadow: "0 0 1rem #fa6400" }}
         >
-          <h2>Responsive Design</h2>
+          <h2 className="section-title max-auto">Responsive Design</h2>
           <p>
           I specialize in creating responsive web designs that adapt seamlessly to different screen sizes,
           ensuring a consistent & engaging user experience across desktops, tablets, smartphones.

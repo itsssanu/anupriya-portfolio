@@ -27,6 +27,30 @@ section {
   overflow: hidden;
 }
 
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-title::before {
+  content: "";
+  background-image: url("/public/dots_light.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  .section-title::before {
+    background-image: url("/public/dots-dark.svg");
+  }
+}
 .services {
   background: linear-gradient(180deg, #0c0c1d, #111132);
   height: 100%;
@@ -46,6 +70,19 @@ section {
     align-self: center;
     text-align: center;
     flex-direction: column;
+    padding: 10px;
+  }
+}
+.services .textContainer .mbltitle {
+  display: none;
+}
+@media (max-width: 738px) {
+  .services .textContainer .mbltitle {
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    padding: 4px;
   }
 }
 .services .textContainer p {
@@ -85,17 +122,6 @@ section {
     flex-direction: column;
     text-align: center;
     gap: 20px;
-  }
-}
-.services .titleContainer .title img {
-  width: 300px;
-  height: 100px;
-  border-radius: 50px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (max-width: 738px) {
-  .services .titleContainer .title img {
     display: none;
   }
 }
@@ -107,6 +133,14 @@ section {
   .services .titleContainer .title h1 {
     font-size: 30px;
   }
+}
+.services .titleContainer .title button.frt-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #fa6400;
+}
+.services .titleContainer .title button.frt-btn:hover {
+  background: linear-gradient(135deg, #ff944d, #fa6400);
 }
 .services .titleContainer .title button {
   width: 300px;
@@ -120,9 +154,7 @@ section {
 }
 @media (max-width: 738px) {
   .services .titleContainer .title button {
-    font-size: 16px;
-    width: 150px;
-    height: 50px;
+    display: none;
   }
 }
 .services .listContainer {
@@ -157,7 +189,8 @@ section {
   .services .listContainer .box {
     flex: none;
     width: 100%;
-    padding: 20px;
+    padding: 26px;
+    margin-bottom: 12px;
   }
 }
 .services .listContainer .box h2 {

@@ -25,4 +25,29 @@ section {
   width: 100vw;
   scroll-snap-align: center;
   overflow: hidden;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-title::before {
+  content: "";
+  background-image: url("/public/dots_light.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  .section-title::before {
+    background-image: url("/public/dots-dark.svg");
+  }
 }/*# sourceMappingURL=app.css.map */
